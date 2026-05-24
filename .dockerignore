@@ -16,8 +16,6 @@ README.md
 
 # Node
 node_modules/
-package.json
-package-lock.json
 releaserc.json
 
 # Build output
