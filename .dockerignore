@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# CI/CD
+.github/
+*.yml
+
+# Documentation
+README.md
+
+# Node
+node_modules/
+package.json
+package-lock.json
+releaserc.json
+
+# Build output
+dist/
+
+# OS
+.DS_Store
