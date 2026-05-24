@@ -1,0 +1,27 @@
+.name-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  color: #ffffff;
+  text-shadow:
+    1px 1px 0 #000000,
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 3px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+}
+
+.name-tag::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  z-index: -1;
+}

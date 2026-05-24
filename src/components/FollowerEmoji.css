@@ -1,0 +1,35 @@
+.follower-emoji-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  user-select: none;
+  z-index: 10;
+  transition: none;
+}
+
+.emoji-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 2px 10px rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(44, 62, 80, 0.2);
+}
+
+.emoji-wrapper:hover {
+  transform: scale(1.1);
+  border-color: rgba(44, 62, 80, 0.4);
+}
+
+.emoji {
+  font-size: 36px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
