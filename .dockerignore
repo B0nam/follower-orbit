@@ -20,6 +20,9 @@ releaserc.json
 
 # Build output
 dist/
+web/node_modules/
+backend/node_modules/
+backend/dist/
 
 # OS
 .DS_Store

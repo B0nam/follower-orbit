@@ -2,18 +2,18 @@ FROM node:22-slim AS builder
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY web/package.json web/package-lock.json ./web/
+RUN cd web && npm ci
 
-COPY public/ ./public/
-COPY src/ ./src/
-COPY index.html vite.config.js eslint.config.js ./
+COPY web/public/ ./web/public/
+COPY web/src/ ./web/src/
+COPY web/index.html web/vite.config.js web/eslint.config.js ./web/
 
-RUN npm run build
+RUN cd web && npm run build
 
 FROM nginx:alpine
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/web/dist /usr/share/nginx/html
 
 EXPOSE 80
 
